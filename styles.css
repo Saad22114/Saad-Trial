@@ -1,0 +1,1052 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #1f3750; /* لون أزرق غامق من الشعار */
+    --secondary-color: #395980; /* لون أزرق فاتح من الشعار */
+    --accent-color: #ff9d1e; /* لون برتقالي من الشعار */
+    --dark-color: #0a1014;
+    --light-color: #f8f9fa;
+    --container-padding: 5%;
+    --section-spacing: 5rem;
+}
+
+body {
+    background-color: var(--light-color);
+}
+
+/* Top Bar Styles */
+.top-bar {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.contact-info a i.fab.fa-whatsapp {
+    color: #25D366;
+}
+
+.contact-info a:hover {
+    opacity: 0.8;
+}
+
+.social-links a {
+    color: white;
+    margin-right: 1rem;
+    font-size: 1.1rem;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Main Navigation */
+.main-nav {
+    background-color: white;
+    padding: 0.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    min-height: 420px; /* لاستيعاب الشعار الكبير */
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* تحسين حجم وموضع الشعار */
+.logo {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.logo img {
+    height: 400px; /* تكبير الشعار */
+    width: auto;
+    object-fit: contain;
+    max-width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+    align-self: flex-start;
+    padding-top: 20px;
+    margin-top: 1rem;
+    padding-top: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.demo-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.demo-btn:hover {
+    background-color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('New folder/1 (1).webp');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.primary-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.secondary-btn:hover {
+    background-color: white;
+    color: var(--dark-color);
+}
+
+.hero-features {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(0,0,0,0.5);
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+/* Solutions Section */
+.solutions {
+    padding: 5rem 5%;
+    background-color: white;
+}
+
+.solutions h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--dark-color);
+}
+
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.solution-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    border: 1px solid rgba(31, 55, 80, 0.1); /* لون أزرق شفاف */
+    transition: all 0.3s ease;
+}
+
+.solution-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 5px 15px rgba(255, 157, 30, 0.2); /* لون البرتقالي بشفافية */
+}
+
+.solution-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-10px);
+}
+
+.solution-card img {
+    width: 100%;
+    height: 300px; /* ارتفاع موحد لصور الحلول */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.solution-card:hover img {
+    transform: scale(1.05);
+}
+
+.solution-card h3 {
+    padding: 1.5rem 1rem 0.5rem;
+    color: var(--dark-color);
+}
+
+.solution-card p {
+    padding: 0 1rem 1rem;
+    color: #666;
+}
+
+.learn-more {
+    display: block;
+    padding: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.learn-more i {
+    margin-right: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.learn-more:hover i {
+    transform: translateX(-5px);
+}
+
+.learn-more:hover {
+    color: var(--accent-color);
+}
+
+/* Services Section */
+.services {
+    padding: 5rem 5%;
+    background-color: var(--light-color);
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--dark-color);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.service-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    padding: 2rem;
+    border: 1px solid rgba(31, 55, 80, 0.1); /* لون أزرق شفاف */
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.service-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.service-content {
+    text-align: center;
+}
+
+.service-content h3 {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.service-features {
+    list-style: none;
+    margin: 1.5rem 0;
+    text-align: right;
+}
+
+.service-features li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #555;
+}
+
+.service-features li i {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.service-link:hover {
+    gap: 1rem;
+    color: var(--accent-color);
+}
+
+.service-link i {
+    transition: transform 0.3s ease;
+}
+
+.service-link:hover i {
+    transform: translateX(-5px);
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Products Section */
+.product-categories {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.category-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background-color: #f0f0f0;
+    color: var(--dark-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.category-btn.active, .category-btn:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 5rem 5%;
+    background: linear-gradient(rgba(31, 55, 80, 0.9), rgba(31, 55, 80, 0.9)),
+                url('New folder/1 (2).webp');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.footer-section i.fab.fa-whatsapp {
+    color: #25D366;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-section p i {
+    width: 20px;
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4rem 5% 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 157, 30, 0.2);
+}
+
+.footer-section h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.footer-section p {
+    line-height: 1.6;
+    color: #cccccc;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section ul li a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-section ul li a:hover {
+    color: var(--accent-color);
+}
+
+.footer-section .contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section .contact-info i {
+    width: 25px;
+    height: 25px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.footer-section i.fab.fa-whatsapp {
+    background-color: #25D366;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-bar, .main-nav {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .solutions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-categories {
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        height: 250px; /* حجم أصغر للشاشات الصغيرة */
+    }
+    
+    .main-nav {
+        min-height: 270px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-section h3::after {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .footer-section ul li a {
+        justify-content: center;
+    }
+
+    .footer-section .contact-info p {
+        justify-content: center;
+    }
+}
+
+/* تحسين التصميم المتجاوب */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+    
+    .hero h1 {
+        font-size: 4rem;
+    }
+    
+    .logo img {
+        height: 400px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .logo img {
+        height: 300px;
+    }
+    
+    .main-nav {
+        min-height: 320px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    :root {
+        --container-padding: 3%;
+        --section-spacing: 4rem;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .logo img {
+        height: 250px;
+    }
+    
+    .main-nav {
+        min-height: 270px;
+    }
+    
+    .solutions-grid,
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    :root {
+        --container-padding: 2rem;
+        --section-spacing: 3rem;
+    }
+    
+    .top-bar {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 0.5rem;
+    }
+    
+    .main-nav {
+        flex-direction: column;
+        min-height: auto;
+        padding: 1rem;
+    }
+    
+    .logo img {
+        height: 200px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        padding: 1rem 0;
+        display: none;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 575px) {
+    :root {
+        --container-padding: 1rem;
+        --section-spacing: 2.5rem;
+    }
+    
+    .top-bar {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+    
+    .contact-info a {
+        margin-left: 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .main-nav {
+        flex-direction: column;
+        min-height: auto;
+        padding: 1rem;
+    }
+    
+    .logo img {
+        height: 200px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        display: none;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 4rem 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-features {
+        position: relative;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .solutions-grid,
+    .services-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .product-categories {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .category-btn {
+        width: calc(50% - 0.5rem);
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .footer-section h3::after {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+}
+
+/* إضافة أنماط جديدة للقائمة المتنقلة */
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--dark-color);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+@media (max-width: 991px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        width: 100%;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* تحسين أداء الانتقالات */
+.nav-links,
+.service-card,
+.solution-card,
+.product-card {
+    will-change: transform;
+}
+
+/* تحسين قراءة النصوص */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    h3 {
+        font-size: 1.4rem;
+    }
+    
+    p {
+        line-height: 1.6;
+    }
+}
+
+/* تحسين المسافات والهوامش */
+.section {
+    padding: var(--section-spacing) var(--container-padding);
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* إضافة تأثيرات لونية للأسعار */
+.price {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* تحسين أزرار إضافة للسلة */
+.add-to-cart {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: var(--accent-color);
+}
+
+/* تحسين ظهور العناصر عند التمرير */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+    border-color: var(--accent-color);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تحسين شكل الإشعارات */
+.notification {
+    background-color: var(--primary-color);
+    color: white;
+    border-right: 4px solid var(--accent-color);
+}
+
+/* تنسيقات الصور العامة */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ضبط صور البطاقات */
+.solution-card img {
+    width: 100%;
+    height: 300px; /* ارتفاع موحد لصور الحلول */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.solution-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px; /* ارتفاع موحد لصور المنتجات */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+/* تحسين الصور في الشاشات المختلفة */
+@media (max-width: 1200px) {
+    .solution-card img {
+        height: 250px;
+    }
+    
+    .product-card img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 991px) {
+    .solution-card img {
+        height: 220px;
+    }
+    
+    .product-card img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .solution-card img {
+        height: 200px;
+    }
+    
+    .product-card img {
+        height: 180px;
+    }
+}
+
+/* تحسين أداء تحميل الصور */
+.solution-card img,
+.product-card img {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform;
+}
+
+/* إضافة تأثير تحميل تدريجي للصور */
+img {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* تحسينات خاصة للصور المحلية */
+.product-card[data-type="camera"] img {
+    object-position: center;
+    background-color: #f8f9fa;
+}
+
+.product-card[data-type="nvr"] img {
+    object-position: top;
+    background-color: #f5f5f5;
+}
+
+.product-card[data-type="accessory"] img {
+    object-position: center;
+    background-color: #f0f0f0;
+}
+
+/* تحسين تأثيرات الصور */
+.product-card img,
+.solution-card img {
+    transform-origin: center;
+    transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.product-card:hover img,
+.solution-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+}
+
+/* تحسين تحميل الصور */
+img[src*="New folder"] {
+    min-height: 200px;
+    background: linear-gradient(45deg, #f0f0f0, #f8f8f8);
+}
